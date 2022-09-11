@@ -1,0 +1,11 @@
+1) Run: docker build . -t week_1:latest
+2) Run: docker run -p 8000:8000 week_1:latest
+# Windows edition
+3) - Run: docker login -u dpekach
+ - Type your password
+ - Run: docker tag week_1:latest dpekach/week_1:latest
+ - Run: docker push dpekach/week_1:latest
+
+Results:
+ - Launched server with result of LR will be on localhost:8000
+ - Image is shared on DockerHub
