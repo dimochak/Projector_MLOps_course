@@ -6,7 +6,7 @@ on:
       - 'main'
 
 env:
-  IMAGE_ML_APP: week_1
+  IMAGE_ML_APP: week_2
 
 jobs:
   build-and-push:
@@ -27,8 +27,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: week_1/
-          file: week_1/Dockerfile
+          context: week_2/
+          file: week_2/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_ML_APP}}:latest
           cache-from: type=registry,ref=dpekach/week_1:buildcache
