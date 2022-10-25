@@ -38,16 +38,16 @@ jobs:
           cache-to: type=registry,ref=dpekach/week_3:buildcache,mode=max
       - name: Build new
         run: |
-          docker build -f week_3_tests/Dockerfile -t nlp-sample:latest week_3_tests
+          docker build -f week_3_tests/Dockerfile -t week_3_tests:latest week_3_tests
       - name: Test code
         run: |
-          docker run nlp-sample:latest make test_code
+          docker run week_3_tests:latest make test_code
       - name: Test data
         run: |
-          docker run nlp-sample:latest make test_data
+          docker run week_3_tests:latest make test_data
       - name: Test model
         run: |
-          docker run nlp-sample:latest make test_model
+          docker run week_3_tests:latest make test_model
       - name: Push
         uses: docker/build-push-action@v2
         with:
