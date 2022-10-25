@@ -1,6 +1,5 @@
 FROM python:3.7-slim-buster
 
-WORKDIR /app
 RUN apt-get update && apt-get install make
 
 
@@ -10,7 +9,6 @@ RUN pip install -r requirements.txt
 
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
-ENV PYTHONPATH /app
 COPY . .
 
 CMD [ "bash" ]
