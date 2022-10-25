@@ -7,6 +7,8 @@ on:
 
 env:
   IMAGE_ML_APP: week_3_tests
+  IMAGE_MAIN_NAME: week_3_test
+  IMAGE_MAIN_TAG: latest
 
 
 jobs:
