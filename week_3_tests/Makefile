@@ -1,5 +1,5 @@
 test:
-	pytest app/tests/
+	pytest ./tests/
 
 test_data:
 	pytest -rc ./tests/test_data.py
